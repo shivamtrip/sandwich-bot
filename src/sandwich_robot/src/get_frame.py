@@ -37,8 +37,8 @@ def callback(data):
     image = br.imgmsg_to_cv2(data)      # converting from ROS image format to OpenCV image format   
     image_height = image.shape[0]
     image_width = image.shape[1]    
-    # image = image[400:800, 400:1200, :]         # iam-doc
-    image = image[200:600, 400:1200, :]         # iam-grumpy
+    image = image[400:800, 400:1200, :]         # iam-doc
+    # image = image[200:600, 400:1200, :]         # iam-grumpy
     image_height_ratio = 400 / image_height
     image_width_ratio =  800 / image_width
     print("SIZE: ", image.shape)
@@ -48,11 +48,11 @@ def callback(data):
     print(" ")
 
     # Red Color Bounds
-    # lower_red =np.array([161,155,84])         # iam-doc
-    # upper_red =np.array([179,255,255])
-
-    lower_red =np.array([161,50,84])            # iam-grumpy
+    lower_red =np.array([161,155,84])         # iam-doc
     upper_red =np.array([179,255,255])
+
+    # lower_red =np.array([161,50,84])            # iam-grumpy
+    # upper_red =np.array([179,255,255])
 
     # Yellow Color Bounds
     lower_yellow= np.array([10, 100, 0])
@@ -79,11 +79,11 @@ def callback(data):
                               mask = yellow_mask)
 
 
-    # im_, contours_red, hierarchy = cv2.findContours(red_mask,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
-    # im, contours_yellow, hierarchy = cv2.findContours(yellow_mask,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+    im_, contours_red, hierarchy = cv2.findContours(red_mask,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+    im, contours_yellow, hierarchy = cv2.findContours(yellow_mask,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
 
-    contours_red, hierarchy = cv2.findContours(red_mask,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
-    contours_yellow, hierarchy = cv2.findContours(yellow_mask,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+    # contours_red, hierarchy = cv2.findContours(red_mask,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+    # contours_yellow, hierarchy = cv2.findContours(yellow_mask,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
 
 
 
@@ -102,8 +102,8 @@ def callback(data):
                         [0.99807252,  0.05551034,  0.02739719],
                         [0.02959404, -0.03914623, -0.99878567]])
 
-    # translation = np.array([[0.64138432 , 0.1008975 ,  0.831477 ]]).reshape(3, 1)         #iam-doc
-    translation = np.array([[0.66138432 , 0.06708975 ,  0.831477 ]]).reshape(3, 1)           # iam-grumpy
+    translation = np.array([[0.64138432 , 0.1108975 ,  0.831477 ]]).reshape(3, 1)         #iam-doc
+    # translation = np.array([[0.66138432 , 0.06708975 ,  0.831477 ]]).reshape(3, 1)           # iam-grumpy
 
 
     transform = np.hstack((rotation, translation))
@@ -251,8 +251,8 @@ def listener():
 
     rospy.init_node('frame_subscriber', anonymous=True)
     print("HERE")
-    # rospy.Subscriber("/rgb/image_raw", Image, callback)         #for iam-doc robot
-    rospy.Subscriber("k4a/rgb/image_raw", Image, callback)            # for iam-grumpy robot
+    rospy.Subscriber("/rgb/image_raw", Image, callback)         #for iam-doc robot
+    # rospy.Subscriber("k4a/rgb/image_raw", Image, callback)            # for iam-grumpy robot
 
 
     rospy.spin()
