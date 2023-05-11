@@ -1,0 +1,8 @@
+prefix=/home/student/sandwich_ws/devel/.private/sandwich_robot
+
+Name: sandwich_robot
+Description: Description of sandwich_robot
+Version: 0.0.0
+Cflags: -I/home/student/sandwich_ws/devel/.private/sandwich_robot/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime

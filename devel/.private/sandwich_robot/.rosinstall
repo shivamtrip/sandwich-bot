@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/student/sandwich_ws/devel/.private/sandwich_robot/setup.sh
