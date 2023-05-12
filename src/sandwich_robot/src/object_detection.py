@@ -14,7 +14,7 @@ from sandwich_robot.msg import object_pose
 This script takes as input camera feed and outputs an array 
 containing image coordinates of every object in frame
 """
-
+#Test
 class ColorDetector:
 
     def _init_(self):
