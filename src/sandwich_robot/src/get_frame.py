@@ -102,7 +102,7 @@ def callback(data):
                         [0.99807252,  0.05551034,  0.02739719],
                         [0.02959404, -0.03914623, -0.99878567]])
 
-    translation = np.array([[0.64138432 , 0.1108975 ,  0.831477 ]]).reshape(3, 1)         #iam-doc
+    translation = np.array([[0.64138432 , 0.1208975 ,  0.831477 ]]).reshape(3, 1)         #iam-doc
     # translation = np.array([[0.66138432 , 0.06708975 ,  0.831477 ]]).reshape(3, 1)           # iam-grumpy
 
 
