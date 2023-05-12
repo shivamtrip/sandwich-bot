@@ -9,8 +9,6 @@ import numpy as np
 import time
 from geometry_msgs.msg import Pose
 from sandwich_robot.msg import object_pose
-# from autolab_core import RigidTransform
-# from frankapy import FrankaArm
 
 
 def check_frame(data):
