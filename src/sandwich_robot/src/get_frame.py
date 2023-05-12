@@ -16,50 +16,26 @@ from sandwich_robot.msg import object_pose
 def check_frame(data):
 
     image = br.imgmsg_to_cv2(data)      # converting from ROS image format to OpenCV image format      
-
-    print("------------------------------------")
-    print(" ")
-
-    print(image.shape)
     cv2.imshow("frame", image[:, :, :3])
     cv2.waitKey(1)
 
-    print("Image")
-    print(data)
-
-
-
-
 def callback(data):
-    # rospy.loginfo(rospy.get_caller_id() + "I heard %s", data.data)
-    # time.sleep(1)
     
     image = br.imgmsg_to_cv2(data)      # converting from ROS image format to OpenCV image format   
     image_height = image.shape[0]
     image_width = image.shape[1]    
     image = image[400:800, 400:1200, :]         # iam-doc
-    # image = image[200:600, 400:1200, :]         # iam-grumpy
     image_height_ratio = 400 / image_height
     image_width_ratio =  800 / image_width
-    print("SIZE: ", image.shape)
-    # time.sleep(1)
-
-    print("------------------------------------")
-    print(" ")
-
+ 
     # Red Color Bounds
     lower_red =np.array([161,155,84])         # iam-doc
     upper_red =np.array([179,255,255])
-
-    # lower_red =np.array([161,50,84])            # iam-grumpy
-    # upper_red =np.array([179,255,255])
 
     # Yellow Color Bounds
     lower_yellow= np.array([10, 100, 0])
     upper_yellow= np.array([20, 255, 255])
 
-
-    # image = cv2.resize(image, (800, 600))
     image = image[:, :, :3]         #taking rgb layers of image only
 
     imgHSV= cv2.cvtColor(image,cv2.COLOR_BGR2HSV)
@@ -82,11 +58,6 @@ def callback(data):
     im_, contours_red, hierarchy = cv2.findContours(red_mask,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
     im, contours_yellow, hierarchy = cv2.findContours(yellow_mask,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
 
-    # contours_red, hierarchy = cv2.findContours(red_mask,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
-    # contours_yellow, hierarchy = cv2.findContours(yellow_mask,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
-
-
-
     camera_mat = np.array([[75.9609985351562, 0.0, 1018.8323974609375, 0.0, 0.0, 975.6666870117188, 777.054931640625, 0.0, 0.0, 0.0, 1.0, 0.0]])
 
     intrinsic = np.array([[975.9609985351562, 0.0, 1018.8323974609375], 
@@ -103,12 +74,8 @@ def callback(data):
                         [0.02959404, -0.03914623, -0.99878567]])
 
     translation = np.array([[0.64138432 , 0.1208975 ,  0.831477 ]]).reshape(3, 1)         #iam-doc
-    # translation = np.array([[0.66138432 , 0.06708975 ,  0.831477 ]]).reshape(3, 1)           # iam-grumpy
-
 
     transform = np.hstack((rotation, translation))
-
-    # print("TRANS: ", transform.shape)
 
     object_x = []               #list storing x coordinates of all objects
     object_y = []               #list storing y coordinates of all objects
@@ -119,7 +86,6 @@ def callback(data):
         area = cv2.contourArea(contour)
         
         if(area > 5000 and area < 7000):
-            print("Red Area: ", area)
             x, y, w, h = cv2.boundingRect(contour)
             image = np.ascontiguousarray(image, dtype=np.uint8)
             image = cv2.rectangle(image, (x, y), 
@@ -130,13 +96,9 @@ def callback(data):
             z = 0.83                # depth of object in camera frame    
             cv2.circle(image, (us, vs), 5, 255, 10)
 
-            print("INITIAL PIXELS: ", (us, vs))
             us += 400
             vs += 400
 
-            print("Final: ", (us, vs))
-
-            
             xs = ((us - cx) / fx) * z       # x coordinate of object center in camera frame
             ys = ((vs - cy) / fy) * z       # y coordinate of object center in camera frame
 
@@ -148,14 +110,6 @@ def callback(data):
                 object_x.append(base_cord[0])
                 object_y.append(base_cord[1])
 
-            # p.position.x = base_cord[0]
-            # p.position.y = base_cord[1]
-            # p.position.z = base_cord[2]
-            
-            # pub.publish(p)
-
-            print("BASE: ", base_cord)
-
     bun_x = []
     bun_y = []
     area_list = []
@@ -163,8 +117,7 @@ def callback(data):
     for pic, contour in enumerate(contours_yellow):
         area = cv2.contourArea(contour)
         
-        if(area > 4000):  # and area < 7000):
-            print("Yellow Area: ", area)
+        if(area > 4000):
             x, y, w, h = cv2.boundingRect(contour)
             image = np.ascontiguousarray(image, dtype=np.uint8)
             image = cv2.rectangle(image, (x, y), 
@@ -190,20 +143,8 @@ def callback(data):
             bun_y.append(base_cord[1])
             area_list.append(area)
 
-            print(area, bun_x)
-
-            # p.position.x = base_cord[0]
-            # p.position.y = base_cord[1]
-            # p.position.z = base_cord[2]
-            
-            # pub.publish(p)
-
-            # print("BASE: ", base_cord)
-
-    print("AREA SIZE: ", len(area_list))
     try:
         if area_list[0] < area_list[1]:
-            print("HERE", bun_x[0])
             object_x.append(bun_x[0])           #appending top bun coordinates first (lesser area)
             object_y.append(bun_y[0])
 
@@ -211,7 +152,6 @@ def callback(data):
             object_y.append(bun_y[1])
 
         else:
-            print("THERE")
             object_x.append(bun_x[1])
             object_y.append(bun_y[1])
 
@@ -219,10 +159,6 @@ def callback(data):
             object_y.append(bun_y[0])
     except IndexError:
         pass
-
-    
-    print("X: ", object_x)
-    print("Y: ", object_y)
 
     pose_pub = object_pose()
 
@@ -250,10 +186,7 @@ def callback_depth(data):
 def listener():
 
     rospy.init_node('frame_subscriber', anonymous=True)
-    print("HERE")
     rospy.Subscriber("/rgb/image_raw", Image, callback)         #for iam-doc robot
-    # rospy.Subscriber("k4a/rgb/image_raw", Image, callback)            # for iam-grumpy robot
-
 
     rospy.spin()
 
@@ -261,9 +194,6 @@ def listener():
 if __name__ == '__main__':
 
     br = CvBridge()
-    # pub = rospy.Publisher('goal_pose', Pose, queue_size=1)
     pub = rospy.Publisher('goal_pose', object_pose, queue_size=1)
-
-
 
     listener()

@@ -14,23 +14,13 @@ class sandwich_maker:
 
 
     def callback(self,pose):
-        # global stop_moving
-        # global des_x
-        # global des_y
 
-
-        # self.des_x = pose.position.x
-        # self.des_y = pose.position.y
         try:
             self.tomato_pos = [pose.x_pose[0], pose.y_pose[0]]
             self.top_bun_pos = [pose.x_pose[1], pose.y_pose[1]]
             self.base_bun_pos = [pose.x_pose[2], pose.y_pose[2]]
         except IndexError:
             pass
-
-
-        print("TOM", self.tomato_pos)
-
 
     def pick_object(self,position):
 
@@ -43,7 +33,6 @@ class sandwich_maker:
             [1.0, 0.0, 0.0],
             [0.0, -1.0, 0.0],
             [0.0, 0.0, -1.0]]),
-            # translation = np.array([0.35+(position/10), -0.25, 0.009]),
             translation = np.array([cur_x, cur_y, 0.025]),
             from_frame = 'franka_tool', to_frame='world')
 
@@ -53,7 +42,6 @@ class sandwich_maker:
             [1.0, 0.0, 0.0],
             [0.0, -1.0, 0.0],
             [0.0, 0.0, -1.0]]),
-            # translation = np.array([0.35+(position/10), -0.25, 0.009]),
             translation = np.array([cur_x, cur_y, 0.01]),
             from_frame = 'franka_tool', to_frame='world')
 
@@ -66,7 +54,6 @@ class sandwich_maker:
             [1.0, 0.0, 0.0],
             [0.0, -1.0, 0.0],
             [0.0, 0.0, -1.0]]),
-            # translation = np.array([0.35+(position/10), -0.25, 0.009]),
             translation = np.array([self.tomato_pos[0], self.tomato_pos[1], 0.025]),
             from_frame = 'franka_tool', to_frame='world')
 
@@ -76,7 +63,6 @@ class sandwich_maker:
             [1.0, 0.0, 0.0],
             [0.0, -1.0, 0.0],
             [0.0, 0.0, -1.0]]),
-            # translation = np.array([0.35+(position/10), -0.25, 0.009]),
             translation = np.array([cur_x, cur_y, 0.006]),
             from_frame = 'franka_tool', to_frame='world')
 
@@ -90,7 +76,6 @@ class sandwich_maker:
             [1.0, 0.0, 0.0],
             [0.0, -1.0, 0.0],
             [0.0, 0.0, -1.0]]),
-            # translation = np.array([0.35+(position/10), -0.25, 0.009]),
             translation = np.array([cur_x, cur_y, 0.025]),
             from_frame = 'franka_tool', to_frame='world')
 
@@ -100,7 +85,6 @@ class sandwich_maker:
             [1.0, 0.0, 0.0],
             [0.0, -1.0, 0.0],
             [0.0, 0.0, -1.0]]),
-            # translation = np.array([0.35+(position/10), -0.25, 0.009]),
             translation = np.array([cur_x, cur_y, 0.01]),
             from_frame = 'franka_tool', to_frame='world')
 
@@ -108,15 +92,6 @@ class sandwich_maker:
 
         else:
             print("PICK NOT WORKING")
-
-            # des_pose = RigidTransform(rotation=np.array([
-            #     [1.0, 0.0, 0.0],
-            #     [0.0, -1.0, 0.0],
-            #     [0.0, 0.0, -1.0]]),
-            #     translation = np.array([0.35+(position/10), -0.25, 0.01]),
-            #     from_frame = 'franka_tool', to_frame='world')
-
-        # fa.goto_pose(des_pose,duration=5.0,use_impedance=False)
 
         fa.close_gripper()
         
@@ -136,7 +111,6 @@ class sandwich_maker:
 
     
     def place_object(self,box_number):
-        # print("Item number:" + str(box_number+1))
         des_pose = RigidTransform(rotation=np.array([
             [1.0, 0.0, 0.0],
             [0.0, -1.0, 0.0],
