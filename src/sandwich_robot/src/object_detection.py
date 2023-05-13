@@ -134,7 +134,7 @@ class ColorDetector:
 
     def main(self):
 
-        rospy.init_node('frame_subscriber', anonymous=True)
+        rospy.init_node('object_detector', anonymous=True)
 
         self.start_listener()
 
