@@ -56,8 +56,6 @@ def callback(data):
     im_, contours_red, hierarchy = cv2.findContours(red_mask,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
     im, contours_yellow, hierarchy = cv2.findContours(yellow_mask,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
 
-    camera_mat = np.array([[75.9609985351562, 0.0, 1018.8323974609375, 0.0, 0.0, 975.6666870117188, 777.054931640625, 0.0, 0.0, 0.0, 1.0, 0.0]])
-
     intrinsic = np.array([[975.9609985351562, 0.0, 1018.8323974609375], 
                           [0.0, 975.6666870117188, 777.054931640625], 
                           [0.0, 0.0, 1.0]])
