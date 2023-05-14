@@ -10,7 +10,7 @@ class sandwich_maker:
     def __init__(self):
         fa = FrankaArm()
         fa.reset_joints()
-        rospy.Subscriber("/goal_pose", object_pose, self.callback)
+        rospy.Subscriber("/object_transform_publisher", object_pose, self.callback)
 
 
     def callback(self,pose):

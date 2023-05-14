@@ -18,12 +18,14 @@ containing image coordinates of every object in frame
 #Test
 class ColorDetector:
 
-    def _init_(self):
+    def __init__(self):
 
         self.image = None
+        self.image_processed = False
 
         self.number_of_colors = 2
         self.contours = []
+        self.area_list = []
 
         # Red Color Bounds
         self.lower_red =np.array([161,155,84])         # iam-doc
@@ -37,13 +39,11 @@ class ColorDetector:
 
         self.object_centers = defaultdict(list)
     
-    def read_image(self, data):
+    def process_image(self, data):
         self.image = br.imgmsg_to_cv2(data)      # converting from ROS image format to OpenCV image format  
         self.image = self.image[:, :, :3]         #taking rgb layers of image only 
-        self.crop_image()                 
-
-    def crop_image(self):
         self.image = self.image[400:800, 400:1200, :]
+        self.image_processed = True 
 
     def get_mask(self):
         
@@ -67,13 +67,16 @@ class ColorDetector:
 
         self.contours = [self.contours_red, self.contours_yellow]
 
+        self.object_centers["red"] = []
+        self.object_centers["yellow"] = []
+
         for i in range(self.number_of_colors):
             cur_contour = self.contours[i]
 
             for pic, contour in enumerate(cur_contour):
                 area = cv2.contourArea(contour)
-                
-                if(area > 4000):
+
+                if(area > 5000 and area < 7000):
                     x, y, w, h = cv2.boundingRect(contour)
                     self.image = np.ascontiguousarray(self.image, dtype=np.uint8)
                     self.image = cv2.rectangle(self.image, (x, y), 
@@ -87,63 +90,75 @@ class ColorDetector:
                     us += 400
                     vs += 400
 
-                if i == 1:
-                    self.object_centers["red"].append((us, vs))
-                elif i == 2:
-                    self.object_centers["yellow"].append((us, vs))
+                    if i == 0:
+                        self.object_centers["red"].append((us, vs))
+                    elif i == 1:
+                        self.object_centers["yellow"].append((us, vs))
 
                     if len(self.object_centers["yellow"]) == 2:
-                        self.yellow_area2 = area
+                        self.yellow_area_2 = area
                     else:
-                        self.yellow_area1 = area
+                        self.yellow_area_1 = area
+
+        cv2.imshow("mask",self.yellow_mask)
+        cv2.imshow("cam",self.image)
+        cv2.waitKey(1)
 
     def create_image_message(self):
         self.object_center_x = []
         self.object_center_y = []
 
-        # Append coordinates of tomato (red ingredient)
-        self.object_center_x.append(self.object_centers["red"][0][0])
-        self.object_center_y.append(self.object_centers["red"][0][1])
+        try:
+            # Append coordinates of tomato (red ingredient)
+            self.object_center_x.append(self.object_centers["red"][0][0])
+            self.object_center_y.append(self.object_centers["red"][0][1])
 
-        # Append coordinates of bun (yellow ingredient)
-        if self.yellow_area1 < self.yellow_area2:
-            self.object_center_x.append(self.object_centers["yellow"][0][0])
-            self.object_center_y.append(self.object_centers["yellow"][0][1])
+            # Append coordinates of bun (yellow ingredient). Base bun is appended first (lower area).
+            if self.yellow_area_1 < self.yellow_area_2:
+                self.object_center_x.append(self.object_centers["yellow"][0][0])
+                self.object_center_y.append(self.object_centers["yellow"][0][1])
 
-            self.object_center_x.append(self.object_centers["yellow"][1][0])
-            self.object_center_y.append(self.object_centers["yellow"][1][1])
+                self.object_center_x.append(self.object_centers["yellow"][1][0])
+                self.object_center_y.append(self.object_centers["yellow"][1][1])
 
-        else:
-            self.object_center_x.append(self.object_centers["yellow"][1][0])
-            self.object_center_y.append(self.object_centers["yellow"][1][1])
+            else:
+                self.object_center_x.append(self.object_centers["yellow"][1][0])
+                self.object_center_y.append(self.object_centers["yellow"][1][1])
 
-            self.object_center_x.append(self.object_centers["yellow"][0][0])
-            self.object_center_y.append(self.object_centers["yellow"][0][1])
+                self.object_center_x.append(self.object_centers["yellow"][0][0])
+                self.object_center_y.append(self.object_centers["yellow"][0][1])
+                
+            self.status = True
+                
+        except IndexError:
+            self.status = False
+            pass
     
     def send_image_coordinates(self):
         self.pose_pub = object_centers()
 
-        self.pose_pub.x_pose = self.object_center_x
-        self.pose_pub.y_pose = self.object_center_y
+        self.pose_pub.x_center = self.object_center_x
+        self.pose_pub.y_center = self.object_center_y
         self.pose_pub.num_items = 3
+        self.pose_pub.status = self.status
 
         pub.publish(self.pose_pub)
 
-    def start_listener(self):
-        rospy.Subscriber("/rgb/image_raw", Image, self.read_image)         #for iam-doc robot
+    def main(self, data):
 
-    def main(self):
+        self.process_image(data)
 
-        rospy.init_node('object_detector', anonymous=True)
-
-        self.start_listener()
-
-        if self.image:
+        if self.image_processed:
             self.get_mask()
             self.get_contours()
             self.create_image_message()
             self.send_image_coordinates()
+        
+    def start_listener(self):
 
+        rospy.init_node('object_detector', anonymous=True)
+
+        rospy.Subscriber("/rgb/image_raw", Image, self.main)         #for iam-doc robot
         rospy.spin()
 
 
@@ -153,7 +168,6 @@ if __name__ == "__main__":
     pub = rospy.Publisher('object_center_publisher', object_centers, queue_size=1)
 
     detector = ColorDetector()
-
-    detector.main()
+    detector.start_listener()
 
 

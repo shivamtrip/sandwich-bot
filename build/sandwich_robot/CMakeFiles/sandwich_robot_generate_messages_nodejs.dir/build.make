@@ -53,16 +53,24 @@ CMAKE_BINARY_DIR = /home/student/sandwich_ws/build/sandwich_robot
 # Include the progress variables for this target.
 include CMakeFiles/sandwich_robot_generate_messages_nodejs.dir/progress.make
 
+CMakeFiles/sandwich_robot_generate_messages_nodejs: /home/student/sandwich_ws/devel/.private/sandwich_robot/share/gennodejs/ros/sandwich_robot/msg/object_centers.js
 CMakeFiles/sandwich_robot_generate_messages_nodejs: /home/student/sandwich_ws/devel/.private/sandwich_robot/share/gennodejs/ros/sandwich_robot/msg/object_pose.js
 
+
+/home/student/sandwich_ws/devel/.private/sandwich_robot/share/gennodejs/ros/sandwich_robot/msg/object_centers.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/student/sandwich_ws/devel/.private/sandwich_robot/share/gennodejs/ros/sandwich_robot/msg/object_centers.js: /home/student/sandwich_ws/src/sandwich_robot/msg/object_centers.msg
+/home/student/sandwich_ws/devel/.private/sandwich_robot/share/gennodejs/ros/sandwich_robot/msg/object_centers.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/student/sandwich_ws/build/sandwich_robot/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from sandwich_robot/object_centers.msg"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/student/sandwich_ws/src/sandwich_robot/msg/object_centers.msg -Isandwich_robot:/home/student/sandwich_ws/src/sandwich_robot/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p sandwich_robot -o /home/student/sandwich_ws/devel/.private/sandwich_robot/share/gennodejs/ros/sandwich_robot/msg
 
 /home/student/sandwich_ws/devel/.private/sandwich_robot/share/gennodejs/ros/sandwich_robot/msg/object_pose.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
 /home/student/sandwich_ws/devel/.private/sandwich_robot/share/gennodejs/ros/sandwich_robot/msg/object_pose.js: /home/student/sandwich_ws/src/sandwich_robot/msg/object_pose.msg
 /home/student/sandwich_ws/devel/.private/sandwich_robot/share/gennodejs/ros/sandwich_robot/msg/object_pose.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/student/sandwich_ws/build/sandwich_robot/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from sandwich_robot/object_pose.msg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/student/sandwich_ws/build/sandwich_robot/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from sandwich_robot/object_pose.msg"
 	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/student/sandwich_ws/src/sandwich_robot/msg/object_pose.msg -Isandwich_robot:/home/student/sandwich_ws/src/sandwich_robot/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p sandwich_robot -o /home/student/sandwich_ws/devel/.private/sandwich_robot/share/gennodejs/ros/sandwich_robot/msg
 
 sandwich_robot_generate_messages_nodejs: CMakeFiles/sandwich_robot_generate_messages_nodejs
+sandwich_robot_generate_messages_nodejs: /home/student/sandwich_ws/devel/.private/sandwich_robot/share/gennodejs/ros/sandwich_robot/msg/object_centers.js
 sandwich_robot_generate_messages_nodejs: /home/student/sandwich_ws/devel/.private/sandwich_robot/share/gennodejs/ros/sandwich_robot/msg/object_pose.js
 sandwich_robot_generate_messages_nodejs: CMakeFiles/sandwich_robot_generate_messages_nodejs.dir/build.make
 

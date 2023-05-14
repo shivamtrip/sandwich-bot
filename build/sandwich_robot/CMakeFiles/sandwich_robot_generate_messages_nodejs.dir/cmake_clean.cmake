@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/sandwich_robot_generate_messages_nodejs"
+  "/home/student/sandwich_ws/devel/.private/sandwich_robot/share/gennodejs/ros/sandwich_robot/msg/object_centers.js"
   "/home/student/sandwich_ws/devel/.private/sandwich_robot/share/gennodejs/ros/sandwich_robot/msg/object_pose.js"
 )
 

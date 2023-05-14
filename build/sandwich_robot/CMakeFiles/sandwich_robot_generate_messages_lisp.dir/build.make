@@ -53,16 +53,24 @@ CMAKE_BINARY_DIR = /home/student/sandwich_ws/build/sandwich_robot
 # Include the progress variables for this target.
 include CMakeFiles/sandwich_robot_generate_messages_lisp.dir/progress.make
 
+CMakeFiles/sandwich_robot_generate_messages_lisp: /home/student/sandwich_ws/devel/.private/sandwich_robot/share/common-lisp/ros/sandwich_robot/msg/object_centers.lisp
 CMakeFiles/sandwich_robot_generate_messages_lisp: /home/student/sandwich_ws/devel/.private/sandwich_robot/share/common-lisp/ros/sandwich_robot/msg/object_pose.lisp
 
+
+/home/student/sandwich_ws/devel/.private/sandwich_robot/share/common-lisp/ros/sandwich_robot/msg/object_centers.lisp: /opt/ros/melodic/lib/genlisp/gen_lisp.py
+/home/student/sandwich_ws/devel/.private/sandwich_robot/share/common-lisp/ros/sandwich_robot/msg/object_centers.lisp: /home/student/sandwich_ws/src/sandwich_robot/msg/object_centers.msg
+/home/student/sandwich_ws/devel/.private/sandwich_robot/share/common-lisp/ros/sandwich_robot/msg/object_centers.lisp: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/student/sandwich_ws/build/sandwich_robot/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from sandwich_robot/object_centers.msg"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/student/sandwich_ws/src/sandwich_robot/msg/object_centers.msg -Isandwich_robot:/home/student/sandwich_ws/src/sandwich_robot/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p sandwich_robot -o /home/student/sandwich_ws/devel/.private/sandwich_robot/share/common-lisp/ros/sandwich_robot/msg
 
 /home/student/sandwich_ws/devel/.private/sandwich_robot/share/common-lisp/ros/sandwich_robot/msg/object_pose.lisp: /opt/ros/melodic/lib/genlisp/gen_lisp.py
 /home/student/sandwich_ws/devel/.private/sandwich_robot/share/common-lisp/ros/sandwich_robot/msg/object_pose.lisp: /home/student/sandwich_ws/src/sandwich_robot/msg/object_pose.msg
 /home/student/sandwich_ws/devel/.private/sandwich_robot/share/common-lisp/ros/sandwich_robot/msg/object_pose.lisp: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/student/sandwich_ws/build/sandwich_robot/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from sandwich_robot/object_pose.msg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/student/sandwich_ws/build/sandwich_robot/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from sandwich_robot/object_pose.msg"
 	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/student/sandwich_ws/src/sandwich_robot/msg/object_pose.msg -Isandwich_robot:/home/student/sandwich_ws/src/sandwich_robot/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p sandwich_robot -o /home/student/sandwich_ws/devel/.private/sandwich_robot/share/common-lisp/ros/sandwich_robot/msg
 
 sandwich_robot_generate_messages_lisp: CMakeFiles/sandwich_robot_generate_messages_lisp
+sandwich_robot_generate_messages_lisp: /home/student/sandwich_ws/devel/.private/sandwich_robot/share/common-lisp/ros/sandwich_robot/msg/object_centers.lisp
 sandwich_robot_generate_messages_lisp: /home/student/sandwich_ws/devel/.private/sandwich_robot/share/common-lisp/ros/sandwich_robot/msg/object_pose.lisp
 sandwich_robot_generate_messages_lisp: CMakeFiles/sandwich_robot_generate_messages_lisp.dir/build.make
 

@@ -1,0 +1,1 @@
+/home/student/sandwich_ws/devel/.private/sandwich_robot/lib/python2.7/dist-packages/sandwich_robot/msg/_object_centers.py

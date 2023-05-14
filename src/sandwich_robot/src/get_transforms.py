@@ -14,7 +14,7 @@ from collections import defaultdict
 
 class Transform_Coordinates:
 
-    def _init_(self):
+    def __init__(self):
 
         self.camera_intrinsics = np.array([[975.9609985351562, 0.0, 1018.8323974609375], 
                             [0.0, 975.6666870117188, 777.054931640625], 
@@ -31,30 +31,33 @@ class Transform_Coordinates:
                             [0.99807252,  0.05551034,  0.02739719],
                             [0.02959404, -0.03914623, -0.99878567]])
 
-        self.translation = np.array([[0.64138432 , 0.1208975 ,  0.831477 ]]).reshape(3, 1)         #iam-doc
+        self.translation = np.array([[0.64138432 , 0.1108975 ,  0.831477 ]]).reshape(3, 1)         #iam-doc
 
         self.camera_to_base_transform = np.hstack((self.rotation, self.translation))
 
         self.object_x = []               #list storing x coordinates of all objects
         self.object_y = []               #list storing y coordinates of all objects
 
-    def start_listener(self):
-        rospy.Subscriber("/object_center_publisher", object_centers, self.transform)         #for iam-doc robot
 
     def transform(self, data):
-        for i in range(data.num_items):
-            xs = ((data.x_center[i] - self.cx) / self.fx) * self.z       # x coordinate of object center in camera frame
-            ys = ((data.y_center[i] - self.cy) / self.fy) * self.z       # y coordinate of object center in camera frame
 
-            camera_cord = np.array([[xs, ys, self.z, 1]]).T
+        self.object_x = []               #list storing x coordinates of all objects
+        self.object_y = []               #list storing y coordinates of all objects
 
-            base_cord = np.matmul(self.camera_to_base_transform, camera_cord).flatten()       # object coordinates in base frame
+        if data.status == True:
+            for i in range(data.num_items):
+                xs = ((data.x_center[i] - self.cx) / self.fx) * self.z       # x coordinate of object center in camera frame
+                ys = ((data.y_center[i] - self.cy) / self.fy) * self.z       # y coordinate of object center in camera frame
 
-            # if not base_cord[0] < 0.2:
-            self.object_x.append(base_cord[0])
-            self.object_y.append(base_cord[1])
-        
-        self.publish_transforms()
+                camera_cord = np.array([[xs, ys, self.z, 1]]).T
+
+                base_cord = np.matmul(self.camera_to_base_transform, camera_cord).flatten()       # object coordinates in base frame
+
+                # if not base_cord[0] < 0.2:
+                self.object_x.append(base_cord[0])
+                self.object_y.append(base_cord[1])
+            
+            self.publish_transforms()
 
     def publish_transforms(self):
 
@@ -66,13 +69,14 @@ class Transform_Coordinates:
 
         pub.publish(pose_pub)
 
-    def main(self):
+        
+    def start_listener(self):
 
         rospy.init_node('coordinate_transformer', anonymous=True)
-        self.start_listener()
+        time.sleep(1)
+        rospy.Subscriber("/object_center_publisher", object_centers, self.transform)         #for iam-doc robot
 
         rospy.spin()
-        
 
 
 if __name__ == "__main__":
@@ -80,5 +84,5 @@ if __name__ == "__main__":
     transformer = Transform_Coordinates()
     pub = rospy.Publisher('object_transform_publisher', object_pose, queue_size=1)
 
-    transformer.main()
+    transformer.start_listener()
 
