@@ -65,7 +65,7 @@ class Transform_Coordinates:
 
         pose_pub.x_pose = self.object_x
         pose_pub.y_pose = self.object_y
-        pose_pub.num_items = 3
+        pose_pub.num_items = len(self.object_x)
 
         pub.publish(pose_pub)
 

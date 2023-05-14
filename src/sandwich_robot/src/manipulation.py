@@ -29,9 +29,15 @@ class SandwichMaker:
 
     def callback(self, pose):
         try:
-            self.tomato_pos = [pose.x_pose[0], pose.y_pose[0]]
-            self.top_bun_pos = [pose.x_pose[1], pose.y_pose[1]]
-            self.base_bun_pos = [pose.x_pose[2], pose.y_pose[2]]
+            if pose.num_items == 1:     # only top bun detected (sandwich stacked)           
+                self.top_bun_pos = [pose.x_pose[0], pose.y_pose[0]]
+            elif pose.num_items == 2:   #tomato and top bun detected (tomato stacked on base bun)
+                self.tomato_pos = [pose.x_pose[0], pose.y_pose[0]]
+                self.top_bun_pos = [pose.x_pose[1], pose.y_pose[1]]
+            elif pose.num_items == 3:   #all items detected
+                self.tomato_pos = [pose.x_pose[0], pose.y_pose[0]]
+                self.top_bun_pos = [pose.x_pose[1], pose.y_pose[1]]
+                self.base_bun_pos = [pose.x_pose[2], pose.y_pose[2]]
 
         except IndexError:
             pass
@@ -76,7 +82,7 @@ class SandwichMaker:
     def pick_manager(self, item_number):
 
         if self.state == States.FORWARD_MODE:
-            self.pick_z = 0.01
+            self.pick_z = 0.007         #0.01
 
             if item_number == 0:
                 print("Picking Base Bun")
@@ -113,7 +119,7 @@ class SandwichMaker:
                 self.pick()
 
             elif item_number == 0:
-                print("Picking Bun")
+                print("Picking Base Bun")
                 self.pick_x = self.base_bun_pos[0]
                 self.pick_y = self.base_bun_pos[1]
                 self.pick_z = 0.012*(item_number - 1.5 +1)+0.015
@@ -206,14 +212,19 @@ class SandwichMaker:
 
         self.fa.open_gripper()
 
+    def fetch_coordinates(self):
+        rospy.Subscriber("/object_transform_publisher", object_pose, self.callback)
+
 
     def forward_mode(self, number_of_items):
-
-        rospy.Subscriber("/object_transform_publisher", object_pose, self.callback)
             
         self.state = States.FORWARD_MODE
 
         for i in range(number_of_items):
+            self.fetch_coordinates()
+            print("Base: ", self.base_bun_pos)
+            print("Top: ", self.top_bun_pos)
+            print("Tomato: ", self.tomato_pos)
     
             self.pick_manager(i)
             self.reset_pose()              
@@ -222,10 +233,14 @@ class SandwichMaker:
 
     def reset_mode(self, number_of_items):
 
-        rospy.Subscriber("/object_transform_publisher", object_pose, self.callback)
         self.state = States.RESET_MODE
 
         for i in range(number_of_items-1,-1,-1):
+            self.fetch_coordinates()
+
+            print("Base: ", self.base_bun_pos)
+            print("Top: ", self.top_bun_pos)
+            print("Tomato: ", self.tomato_pos)
 
             self.fa.open_gripper()
             self.pick_manager(i)
