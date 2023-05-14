@@ -3,6 +3,7 @@
 from enum import Enum
 import rospy
 import manipulation
+import time
 
 class States(Enum):
     IDLE = 0
@@ -12,8 +13,7 @@ class States(Enum):
 
 class SandwichFSM:
 
-    def _init_(self):
-        rospy.init_node('sandwich_fsm', anonymous = True)
+    def __init__(self):
 
         self.state = States.IDLE
         self.number_of_objects = 3
@@ -25,15 +25,20 @@ class SandwichFSM:
 
             if self.state == States.IDLE:
                 print("Sandwich Robot initializing..")
+                
+                sw = manipulation.SandwichMaker()           #instantiate sandwich maker class
+                # sw.start_listener()
+                time.sleep(1)
                 self.state = States.FORWARD_MODE
 
             elif self.state == States.FORWARD_MODE:
-
-                manipulation.forward_mode(self.number_of_objects)
+                print("FORWARD MODE")
+                sw.forward_mode(self.number_of_objects)
                 self.state = States.RESET_MODE
 
             elif self.state == States.RESET_MODE:
-                manipulation.reset_mode(self.number_of_objects)
+                print("RESET MODE")
+                sw.reset_mode(self.number_of_objects)
 
                 self.state = States.IDLE
 
