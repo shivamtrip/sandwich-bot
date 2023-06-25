@@ -53,17 +53,26 @@ CMAKE_BINARY_DIR = /home/student/sandwich_ws/build/sandwich_robot
 # Include the progress variables for this target.
 include CMakeFiles/sandwich_robot_generate_messages_cpp.dir/progress.make
 
+CMakeFiles/sandwich_robot_generate_messages_cpp: /home/student/sandwich_ws/devel/.private/sandwich_robot/include/sandwich_robot/object_centers.h
 CMakeFiles/sandwich_robot_generate_messages_cpp: /home/student/sandwich_ws/devel/.private/sandwich_robot/include/sandwich_robot/object_pose.h
 
+
+/home/student/sandwich_ws/devel/.private/sandwich_robot/include/sandwich_robot/object_centers.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/student/sandwich_ws/devel/.private/sandwich_robot/include/sandwich_robot/object_centers.h: /home/student/sandwich_ws/src/sandwich_robot/msg/object_centers.msg
+/home/student/sandwich_ws/devel/.private/sandwich_robot/include/sandwich_robot/object_centers.h: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+/home/student/sandwich_ws/devel/.private/sandwich_robot/include/sandwich_robot/object_centers.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/student/sandwich_ws/build/sandwich_robot/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from sandwich_robot/object_centers.msg"
+	cd /home/student/sandwich_ws/src/sandwich_robot && /home/student/sandwich_ws/build/sandwich_robot/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/student/sandwich_ws/src/sandwich_robot/msg/object_centers.msg -Isandwich_robot:/home/student/sandwich_ws/src/sandwich_robot/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p sandwich_robot -o /home/student/sandwich_ws/devel/.private/sandwich_robot/include/sandwich_robot -e /opt/ros/melodic/share/gencpp/cmake/..
 
 /home/student/sandwich_ws/devel/.private/sandwich_robot/include/sandwich_robot/object_pose.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
 /home/student/sandwich_ws/devel/.private/sandwich_robot/include/sandwich_robot/object_pose.h: /home/student/sandwich_ws/src/sandwich_robot/msg/object_pose.msg
 /home/student/sandwich_ws/devel/.private/sandwich_robot/include/sandwich_robot/object_pose.h: /opt/ros/melodic/share/std_msgs/msg/Header.msg
 /home/student/sandwich_ws/devel/.private/sandwich_robot/include/sandwich_robot/object_pose.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/student/sandwich_ws/build/sandwich_robot/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from sandwich_robot/object_pose.msg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/student/sandwich_ws/build/sandwich_robot/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from sandwich_robot/object_pose.msg"
 	cd /home/student/sandwich_ws/src/sandwich_robot && /home/student/sandwich_ws/build/sandwich_robot/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/student/sandwich_ws/src/sandwich_robot/msg/object_pose.msg -Isandwich_robot:/home/student/sandwich_ws/src/sandwich_robot/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p sandwich_robot -o /home/student/sandwich_ws/devel/.private/sandwich_robot/include/sandwich_robot -e /opt/ros/melodic/share/gencpp/cmake/..
 
 sandwich_robot_generate_messages_cpp: CMakeFiles/sandwich_robot_generate_messages_cpp
+sandwich_robot_generate_messages_cpp: /home/student/sandwich_ws/devel/.private/sandwich_robot/include/sandwich_robot/object_centers.h
 sandwich_robot_generate_messages_cpp: /home/student/sandwich_ws/devel/.private/sandwich_robot/include/sandwich_robot/object_pose.h
 sandwich_robot_generate_messages_cpp: CMakeFiles/sandwich_robot_generate_messages_cpp.dir/build.make
 

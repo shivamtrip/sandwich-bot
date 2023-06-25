@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/sandwich_robot_generate_messages_eus"
+  "/home/student/sandwich_ws/devel/.private/sandwich_robot/share/roseus/ros/sandwich_robot/msg/object_centers.l"
   "/home/student/sandwich_ws/devel/.private/sandwich_robot/share/roseus/ros/sandwich_robot/msg/object_pose.l"
   "/home/student/sandwich_ws/devel/.private/sandwich_robot/share/roseus/ros/sandwich_robot/manifest.l"
 )

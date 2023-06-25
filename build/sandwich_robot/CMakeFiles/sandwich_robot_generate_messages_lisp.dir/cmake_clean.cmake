@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/sandwich_robot_generate_messages_lisp"
+  "/home/student/sandwich_ws/devel/.private/sandwich_robot/share/common-lisp/ros/sandwich_robot/msg/object_centers.lisp"
   "/home/student/sandwich_ws/devel/.private/sandwich_robot/share/common-lisp/ros/sandwich_robot/msg/object_pose.lisp"
 )
 

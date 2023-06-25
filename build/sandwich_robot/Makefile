@@ -233,6 +233,19 @@ sandwich_robot_generate_messages_lisp/fast:
 .PHONY : sandwich_robot_generate_messages_lisp/fast
 
 #=============================================================================
+# Target rules for targets named sandwich_robot_geneus
+
+# Build rule for target.
+sandwich_robot_geneus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sandwich_robot_geneus
+.PHONY : sandwich_robot_geneus
+
+# fast build rule for target.
+sandwich_robot_geneus/fast:
+	$(MAKE) -f CMakeFiles/sandwich_robot_geneus.dir/build.make CMakeFiles/sandwich_robot_geneus.dir/build
+.PHONY : sandwich_robot_geneus/fast
+
+#=============================================================================
 # Target rules for targets named clean_test_results
 
 # Build rule for target.
@@ -311,19 +324,6 @@ tests/fast:
 .PHONY : tests/fast
 
 #=============================================================================
-# Target rules for targets named sandwich_robot_generate_messages_eus
-
-# Build rule for target.
-sandwich_robot_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sandwich_robot_generate_messages_eus
-.PHONY : sandwich_robot_generate_messages_eus
-
-# fast build rule for target.
-sandwich_robot_generate_messages_eus/fast:
-	$(MAKE) -f CMakeFiles/sandwich_robot_generate_messages_eus.dir/build.make CMakeFiles/sandwich_robot_generate_messages_eus.dir/build
-.PHONY : sandwich_robot_generate_messages_eus/fast
-
-#=============================================================================
 # Target rules for targets named std_msgs_generate_messages_lisp
 
 # Build rule for target.
@@ -335,19 +335,6 @@ std_msgs_generate_messages_lisp: cmake_check_build_system
 std_msgs_generate_messages_lisp/fast:
 	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 .PHONY : std_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named sandwich_robot_geneus
-
-# Build rule for target.
-sandwich_robot_geneus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sandwich_robot_geneus
-.PHONY : sandwich_robot_geneus
-
-# fast build rule for target.
-sandwich_robot_geneus/fast:
-	$(MAKE) -f CMakeFiles/sandwich_robot_geneus.dir/build.make CMakeFiles/sandwich_robot_geneus.dir/build
-.PHONY : sandwich_robot_geneus/fast
 
 #=============================================================================
 # Target rules for targets named std_msgs_generate_messages_nodejs
@@ -387,6 +374,32 @@ sandwich_robot_generate_messages: cmake_check_build_system
 sandwich_robot_generate_messages/fast:
 	$(MAKE) -f CMakeFiles/sandwich_robot_generate_messages.dir/build.make CMakeFiles/sandwich_robot_generate_messages.dir/build
 .PHONY : sandwich_robot_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named sandwich_robot_generate_messages_eus
+
+# Build rule for target.
+sandwich_robot_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sandwich_robot_generate_messages_eus
+.PHONY : sandwich_robot_generate_messages_eus
+
+# fast build rule for target.
+sandwich_robot_generate_messages_eus/fast:
+	$(MAKE) -f CMakeFiles/sandwich_robot_generate_messages_eus.dir/build.make CMakeFiles/sandwich_robot_generate_messages_eus.dir/build
+.PHONY : sandwich_robot_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named _sandwich_robot_generate_messages_check_deps_object_centers
+
+# Build rule for target.
+_sandwich_robot_generate_messages_check_deps_object_centers: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _sandwich_robot_generate_messages_check_deps_object_centers
+.PHONY : _sandwich_robot_generate_messages_check_deps_object_centers
+
+# fast build rule for target.
+_sandwich_robot_generate_messages_check_deps_object_centers/fast:
+	$(MAKE) -f CMakeFiles/_sandwich_robot_generate_messages_check_deps_object_centers.dir/build.make CMakeFiles/_sandwich_robot_generate_messages_check_deps_object_centers.dir/build
+.PHONY : _sandwich_robot_generate_messages_check_deps_object_centers/fast
 
 #=============================================================================
 # Target rules for targets named std_msgs_generate_messages_cpp
@@ -521,6 +534,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... sandwich_robot_genlisp"
 	@echo "... sandwich_robot_generate_messages_lisp"
+	@echo "... sandwich_robot_geneus"
 	@echo "... clean_test_results"
 	@echo "... sandwich_robot_gencpp"
 	@echo "... install/local"
@@ -528,13 +542,13 @@ help:
 	@echo "... doxygen"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... tests"
-	@echo "... list_install_components"
-	@echo "... sandwich_robot_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... sandwich_robot_geneus"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... sandwich_robot_generate_messages"
+	@echo "... list_install_components"
+	@echo "... sandwich_robot_generate_messages_eus"
+	@echo "... _sandwich_robot_generate_messages_check_deps_object_centers"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... run_tests"
 	@echo "... download_extra_data"
