@@ -129,7 +129,10 @@ file(INSTALL DESTINATION "/home/student/sandwich_ws/install" TYPE FILE FILES "/h
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/sandwich_robot/msg" TYPE FILE FILES "/home/student/sandwich_ws/src/sandwich_robot/msg/object_pose.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/sandwich_robot/msg" TYPE FILE FILES
+    "/home/student/sandwich_ws/src/sandwich_robot/msg/object_pose.msg"
+    "/home/student/sandwich_ws/src/sandwich_robot/msg/object_centers.msg"
+    )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

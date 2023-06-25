@@ -53,21 +53,29 @@ CMAKE_BINARY_DIR = /home/student/sandwich_ws/build/sandwich_robot
 # Include the progress variables for this target.
 include CMakeFiles/sandwich_robot_generate_messages_eus.dir/progress.make
 
+CMakeFiles/sandwich_robot_generate_messages_eus: /home/student/sandwich_ws/devel/.private/sandwich_robot/share/roseus/ros/sandwich_robot/msg/object_centers.l
 CMakeFiles/sandwich_robot_generate_messages_eus: /home/student/sandwich_ws/devel/.private/sandwich_robot/share/roseus/ros/sandwich_robot/msg/object_pose.l
 CMakeFiles/sandwich_robot_generate_messages_eus: /home/student/sandwich_ws/devel/.private/sandwich_robot/share/roseus/ros/sandwich_robot/manifest.l
 
 
+/home/student/sandwich_ws/devel/.private/sandwich_robot/share/roseus/ros/sandwich_robot/msg/object_centers.l: /opt/ros/melodic/lib/geneus/gen_eus.py
+/home/student/sandwich_ws/devel/.private/sandwich_robot/share/roseus/ros/sandwich_robot/msg/object_centers.l: /home/student/sandwich_ws/src/sandwich_robot/msg/object_centers.msg
+/home/student/sandwich_ws/devel/.private/sandwich_robot/share/roseus/ros/sandwich_robot/msg/object_centers.l: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/student/sandwich_ws/build/sandwich_robot/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from sandwich_robot/object_centers.msg"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/student/sandwich_ws/src/sandwich_robot/msg/object_centers.msg -Isandwich_robot:/home/student/sandwich_ws/src/sandwich_robot/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p sandwich_robot -o /home/student/sandwich_ws/devel/.private/sandwich_robot/share/roseus/ros/sandwich_robot/msg
+
 /home/student/sandwich_ws/devel/.private/sandwich_robot/share/roseus/ros/sandwich_robot/msg/object_pose.l: /opt/ros/melodic/lib/geneus/gen_eus.py
 /home/student/sandwich_ws/devel/.private/sandwich_robot/share/roseus/ros/sandwich_robot/msg/object_pose.l: /home/student/sandwich_ws/src/sandwich_robot/msg/object_pose.msg
 /home/student/sandwich_ws/devel/.private/sandwich_robot/share/roseus/ros/sandwich_robot/msg/object_pose.l: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/student/sandwich_ws/build/sandwich_robot/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from sandwich_robot/object_pose.msg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/student/sandwich_ws/build/sandwich_robot/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from sandwich_robot/object_pose.msg"
 	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/student/sandwich_ws/src/sandwich_robot/msg/object_pose.msg -Isandwich_robot:/home/student/sandwich_ws/src/sandwich_robot/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p sandwich_robot -o /home/student/sandwich_ws/devel/.private/sandwich_robot/share/roseus/ros/sandwich_robot/msg
 
 /home/student/sandwich_ws/devel/.private/sandwich_robot/share/roseus/ros/sandwich_robot/manifest.l: /opt/ros/melodic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/student/sandwich_ws/build/sandwich_robot/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp manifest code for sandwich_robot"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/student/sandwich_ws/build/sandwich_robot/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp manifest code for sandwich_robot"
 	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/student/sandwich_ws/devel/.private/sandwich_robot/share/roseus/ros/sandwich_robot sandwich_robot std_msgs
 
 sandwich_robot_generate_messages_eus: CMakeFiles/sandwich_robot_generate_messages_eus
+sandwich_robot_generate_messages_eus: /home/student/sandwich_ws/devel/.private/sandwich_robot/share/roseus/ros/sandwich_robot/msg/object_centers.l
 sandwich_robot_generate_messages_eus: /home/student/sandwich_ws/devel/.private/sandwich_robot/share/roseus/ros/sandwich_robot/msg/object_pose.l
 sandwich_robot_generate_messages_eus: /home/student/sandwich_ws/devel/.private/sandwich_robot/share/roseus/ros/sandwich_robot/manifest.l
 sandwich_robot_generate_messages_eus: CMakeFiles/sandwich_robot_generate_messages_eus.dir/build.make

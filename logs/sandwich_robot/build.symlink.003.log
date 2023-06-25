@@ -1,0 +1,24 @@
+Linked: (/home/student/sandwich_ws/devel/.private/sandwich_robot/share/gennodejs/ros/sandwich_robot/_index.js, /home/student/sandwich_ws/devel/share/gennodejs/ros/sandwich_robot/_index.js)
+Symlinking /home/student/sandwich_ws/devel/share/gennodejs/ros/sandwich_robot/msg/object_centers.js
+Linked: (/home/student/sandwich_ws/devel/.private/sandwich_robot/share/gennodejs/ros/sandwich_robot/msg/_index.js, /home/student/sandwich_ws/devel/share/gennodejs/ros/sandwich_robot/msg/_index.js)
+Linked: (/home/student/sandwich_ws/devel/.private/sandwich_robot/share/gennodejs/ros/sandwich_robot/msg/object_pose.js, /home/student/sandwich_ws/devel/share/gennodejs/ros/sandwich_robot/msg/object_pose.js)
+Linked: (/home/student/sandwich_ws/devel/.private/sandwich_robot/share/roseus/ros/sandwich_robot/manifest.l, /home/student/sandwich_ws/devel/share/roseus/ros/sandwich_robot/manifest.l)
+Linked: (/home/student/sandwich_ws/devel/.private/sandwich_robot/share/roseus/ros/sandwich_robot/msg/object_pose.l, /home/student/sandwich_ws/devel/share/roseus/ros/sandwich_robot/msg/object_pose.l)
+Symlinking /home/student/sandwich_ws/devel/share/roseus/ros/sandwich_robot/msg/object_centers.l
+Linked: (/home/student/sandwich_ws/devel/.private/sandwich_robot/share/sandwich_robot/cmake/sandwich_robotConfig.cmake, /home/student/sandwich_ws/devel/share/sandwich_robot/cmake/sandwich_robotConfig.cmake)
+Linked: (/home/student/sandwich_ws/devel/.private/sandwich_robot/share/sandwich_robot/cmake/sandwich_robot-msg-extras.cmake, /home/student/sandwich_ws/devel/share/sandwich_robot/cmake/sandwich_robot-msg-extras.cmake)
+Linked: (/home/student/sandwich_ws/devel/.private/sandwich_robot/share/sandwich_robot/cmake/sandwich_robotConfig-version.cmake, /home/student/sandwich_ws/devel/share/sandwich_robot/cmake/sandwich_robotConfig-version.cmake)
+Linked: (/home/student/sandwich_ws/devel/.private/sandwich_robot/share/sandwich_robot/cmake/sandwich_robot-msg-paths.cmake, /home/student/sandwich_ws/devel/share/sandwich_robot/cmake/sandwich_robot-msg-paths.cmake)
+Linked: (/home/student/sandwich_ws/devel/.private/sandwich_robot/share/common-lisp/ros/sandwich_robot/msg/_package_object_pose.lisp, /home/student/sandwich_ws/devel/share/common-lisp/ros/sandwich_robot/msg/_package_object_pose.lisp)
+Symlinking /home/student/sandwich_ws/devel/share/common-lisp/ros/sandwich_robot/msg/object_centers.lisp
+Symlinking /home/student/sandwich_ws/devel/share/common-lisp/ros/sandwich_robot/msg/_package_object_centers.lisp
+Linked: (/home/student/sandwich_ws/devel/.private/sandwich_robot/share/common-lisp/ros/sandwich_robot/msg/_package.lisp, /home/student/sandwich_ws/devel/share/common-lisp/ros/sandwich_robot/msg/_package.lisp)
+Linked: (/home/student/sandwich_ws/devel/.private/sandwich_robot/share/common-lisp/ros/sandwich_robot/msg/object_pose.lisp, /home/student/sandwich_ws/devel/share/common-lisp/ros/sandwich_robot/msg/object_pose.lisp)
+Linked: (/home/student/sandwich_ws/devel/.private/sandwich_robot/share/common-lisp/ros/sandwich_robot/msg/sandwich_robot-msg.asd, /home/student/sandwich_ws/devel/share/common-lisp/ros/sandwich_robot/msg/sandwich_robot-msg.asd)
+Linked: (/home/student/sandwich_ws/devel/.private/sandwich_robot/include/sandwich_robot/object_pose.h, /home/student/sandwich_ws/devel/include/sandwich_robot/object_pose.h)
+Symlinking /home/student/sandwich_ws/devel/include/sandwich_robot/object_centers.h
+Linked: (/home/student/sandwich_ws/devel/.private/sandwich_robot/lib/python2.7/dist-packages/sandwich_robot/__init__.py, /home/student/sandwich_ws/devel/lib/python2.7/dist-packages/sandwich_robot/__init__.py)
+Linked: (/home/student/sandwich_ws/devel/.private/sandwich_robot/lib/python2.7/dist-packages/sandwich_robot/msg/__init__.py, /home/student/sandwich_ws/devel/lib/python2.7/dist-packages/sandwich_robot/msg/__init__.py)
+Linked: (/home/student/sandwich_ws/devel/.private/sandwich_robot/lib/python2.7/dist-packages/sandwich_robot/msg/_object_pose.py, /home/student/sandwich_ws/devel/lib/python2.7/dist-packages/sandwich_robot/msg/_object_pose.py)
+Symlinking /home/student/sandwich_ws/devel/lib/python2.7/dist-packages/sandwich_robot/msg/_object_centers.py
+Linked: (/home/student/sandwich_ws/devel/.private/sandwich_robot/lib/pkgconfig/sandwich_robot.pc, /home/student/sandwich_ws/devel/lib/pkgconfig/sandwich_robot.pc)

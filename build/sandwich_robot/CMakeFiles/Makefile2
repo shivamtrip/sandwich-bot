@@ -64,15 +64,16 @@ CMAKE_BINARY_DIR = /home/student/sandwich_ws/build/sandwich_robot
 
 # All Build rule for target.
 CMakeFiles/sandwich_robot_generate_messages_py.dir/all: CMakeFiles/std_msgs_generate_messages_py.dir/all
+CMakeFiles/sandwich_robot_generate_messages_py.dir/all: CMakeFiles/_sandwich_robot_generate_messages_check_deps_object_centers.dir/all
 CMakeFiles/sandwich_robot_generate_messages_py.dir/all: CMakeFiles/_sandwich_robot_generate_messages_check_deps_object_pose.dir/all
 	$(MAKE) -f CMakeFiles/sandwich_robot_generate_messages_py.dir/build.make CMakeFiles/sandwich_robot_generate_messages_py.dir/depend
 	$(MAKE) -f CMakeFiles/sandwich_robot_generate_messages_py.dir/build.make CMakeFiles/sandwich_robot_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/student/sandwich_ws/build/sandwich_robot/CMakeFiles --progress-num=17,18 "Built target sandwich_robot_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/student/sandwich_ws/build/sandwich_robot/CMakeFiles --progress-num=21,22,23 "Built target sandwich_robot_generate_messages_py"
 .PHONY : CMakeFiles/sandwich_robot_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/sandwich_robot_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/sandwich_robot_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 0
 .PHONY : CMakeFiles/sandwich_robot_generate_messages_py.dir/rule
@@ -104,7 +105,7 @@ CMakeFiles/sandwich_robot_gennodejs.dir/all: CMakeFiles/sandwich_robot_generate_
 
 # Build rule for subdir invocation for target.
 CMakeFiles/sandwich_robot_gennodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/sandwich_robot_gennodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 0
 .PHONY : CMakeFiles/sandwich_robot_gennodejs.dir/rule
@@ -129,15 +130,16 @@ clean: CMakeFiles/sandwich_robot_gennodejs.dir/clean
 
 # All Build rule for target.
 CMakeFiles/sandwich_robot_generate_messages_nodejs.dir/all: CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+CMakeFiles/sandwich_robot_generate_messages_nodejs.dir/all: CMakeFiles/_sandwich_robot_generate_messages_check_deps_object_centers.dir/all
 CMakeFiles/sandwich_robot_generate_messages_nodejs.dir/all: CMakeFiles/_sandwich_robot_generate_messages_check_deps_object_pose.dir/all
 	$(MAKE) -f CMakeFiles/sandwich_robot_generate_messages_nodejs.dir/build.make CMakeFiles/sandwich_robot_generate_messages_nodejs.dir/depend
 	$(MAKE) -f CMakeFiles/sandwich_robot_generate_messages_nodejs.dir/build.make CMakeFiles/sandwich_robot_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/student/sandwich_ws/build/sandwich_robot/CMakeFiles --progress-num=16 "Built target sandwich_robot_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/student/sandwich_ws/build/sandwich_robot/CMakeFiles --progress-num=19,20 "Built target sandwich_robot_generate_messages_nodejs"
 .PHONY : CMakeFiles/sandwich_robot_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/sandwich_robot_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/sandwich_robot_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 0
 .PHONY : CMakeFiles/sandwich_robot_generate_messages_nodejs.dir/rule
@@ -169,7 +171,7 @@ CMakeFiles/sandwich_robot_genlisp.dir/all: CMakeFiles/sandwich_robot_generate_me
 
 # Build rule for subdir invocation for target.
 CMakeFiles/sandwich_robot_genlisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/sandwich_robot_genlisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 0
 .PHONY : CMakeFiles/sandwich_robot_genlisp.dir/rule
@@ -194,15 +196,16 @@ clean: CMakeFiles/sandwich_robot_genlisp.dir/clean
 
 # All Build rule for target.
 CMakeFiles/sandwich_robot_generate_messages_lisp.dir/all: CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+CMakeFiles/sandwich_robot_generate_messages_lisp.dir/all: CMakeFiles/_sandwich_robot_generate_messages_check_deps_object_centers.dir/all
 CMakeFiles/sandwich_robot_generate_messages_lisp.dir/all: CMakeFiles/_sandwich_robot_generate_messages_check_deps_object_pose.dir/all
 	$(MAKE) -f CMakeFiles/sandwich_robot_generate_messages_lisp.dir/build.make CMakeFiles/sandwich_robot_generate_messages_lisp.dir/depend
 	$(MAKE) -f CMakeFiles/sandwich_robot_generate_messages_lisp.dir/build.make CMakeFiles/sandwich_robot_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/student/sandwich_ws/build/sandwich_robot/CMakeFiles --progress-num=15 "Built target sandwich_robot_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/student/sandwich_ws/build/sandwich_robot/CMakeFiles --progress-num=17,18 "Built target sandwich_robot_generate_messages_lisp"
 .PHONY : CMakeFiles/sandwich_robot_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/sandwich_robot_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/sandwich_robot_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 0
 .PHONY : CMakeFiles/sandwich_robot_generate_messages_lisp.dir/rule
@@ -219,6 +222,38 @@ CMakeFiles/sandwich_robot_generate_messages_lisp.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/sandwich_robot_generate_messages_lisp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/sandwich_robot_geneus.dir
+
+# All Build rule for target.
+CMakeFiles/sandwich_robot_geneus.dir/all: CMakeFiles/sandwich_robot_generate_messages_eus.dir/all
+	$(MAKE) -f CMakeFiles/sandwich_robot_geneus.dir/build.make CMakeFiles/sandwich_robot_geneus.dir/depend
+	$(MAKE) -f CMakeFiles/sandwich_robot_geneus.dir/build.make CMakeFiles/sandwich_robot_geneus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/student/sandwich_ws/build/sandwich_robot/CMakeFiles --progress-num= "Built target sandwich_robot_geneus"
+.PHONY : CMakeFiles/sandwich_robot_geneus.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/sandwich_robot_geneus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/sandwich_robot_geneus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 0
+.PHONY : CMakeFiles/sandwich_robot_geneus.dir/rule
+
+# Convenience name for target.
+sandwich_robot_geneus: CMakeFiles/sandwich_robot_geneus.dir/rule
+
+.PHONY : sandwich_robot_geneus
+
+# clean rule for target.
+CMakeFiles/sandwich_robot_geneus.dir/clean:
+	$(MAKE) -f CMakeFiles/sandwich_robot_geneus.dir/build.make CMakeFiles/sandwich_robot_geneus.dir/clean
+.PHONY : CMakeFiles/sandwich_robot_geneus.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/sandwich_robot_geneus.dir/clean
 
 .PHONY : clean
 
@@ -266,7 +301,7 @@ CMakeFiles/sandwich_robot_gencpp.dir/all: CMakeFiles/sandwich_robot_generate_mes
 
 # Build rule for subdir invocation for target.
 CMakeFiles/sandwich_robot_gencpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/sandwich_robot_gencpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 0
 .PHONY : CMakeFiles/sandwich_robot_gencpp.dir/rule
@@ -298,7 +333,7 @@ CMakeFiles/sandwich_robot_genpy.dir/all: CMakeFiles/sandwich_robot_generate_mess
 
 # Build rule for subdir invocation for target.
 CMakeFiles/sandwich_robot_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/sandwich_robot_genpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 0
 .PHONY : CMakeFiles/sandwich_robot_genpy.dir/rule
@@ -415,39 +450,6 @@ clean: CMakeFiles/tests.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/sandwich_robot_generate_messages_eus.dir
-
-# All Build rule for target.
-CMakeFiles/sandwich_robot_generate_messages_eus.dir/all: CMakeFiles/std_msgs_generate_messages_eus.dir/all
-CMakeFiles/sandwich_robot_generate_messages_eus.dir/all: CMakeFiles/_sandwich_robot_generate_messages_check_deps_object_pose.dir/all
-	$(MAKE) -f CMakeFiles/sandwich_robot_generate_messages_eus.dir/build.make CMakeFiles/sandwich_robot_generate_messages_eus.dir/depend
-	$(MAKE) -f CMakeFiles/sandwich_robot_generate_messages_eus.dir/build.make CMakeFiles/sandwich_robot_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/student/sandwich_ws/build/sandwich_robot/CMakeFiles --progress-num=13,14 "Built target sandwich_robot_generate_messages_eus"
-.PHONY : CMakeFiles/sandwich_robot_generate_messages_eus.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/sandwich_robot_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/sandwich_robot_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 0
-.PHONY : CMakeFiles/sandwich_robot_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-sandwich_robot_generate_messages_eus: CMakeFiles/sandwich_robot_generate_messages_eus.dir/rule
-
-.PHONY : sandwich_robot_generate_messages_eus
-
-# clean rule for target.
-CMakeFiles/sandwich_robot_generate_messages_eus.dir/clean:
-	$(MAKE) -f CMakeFiles/sandwich_robot_generate_messages_eus.dir/build.make CMakeFiles/sandwich_robot_generate_messages_eus.dir/clean
-.PHONY : CMakeFiles/sandwich_robot_generate_messages_eus.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/sandwich_robot_generate_messages_eus.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/std_msgs_generate_messages_lisp.dir
 
 # All Build rule for target.
@@ -476,38 +478,6 @@ CMakeFiles/std_msgs_generate_messages_lisp.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/sandwich_robot_geneus.dir
-
-# All Build rule for target.
-CMakeFiles/sandwich_robot_geneus.dir/all: CMakeFiles/sandwich_robot_generate_messages_eus.dir/all
-	$(MAKE) -f CMakeFiles/sandwich_robot_geneus.dir/build.make CMakeFiles/sandwich_robot_geneus.dir/depend
-	$(MAKE) -f CMakeFiles/sandwich_robot_geneus.dir/build.make CMakeFiles/sandwich_robot_geneus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/student/sandwich_ws/build/sandwich_robot/CMakeFiles --progress-num= "Built target sandwich_robot_geneus"
-.PHONY : CMakeFiles/sandwich_robot_geneus.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/sandwich_robot_geneus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/sandwich_robot_geneus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 0
-.PHONY : CMakeFiles/sandwich_robot_geneus.dir/rule
-
-# Convenience name for target.
-sandwich_robot_geneus: CMakeFiles/sandwich_robot_geneus.dir/rule
-
-.PHONY : sandwich_robot_geneus
-
-# clean rule for target.
-CMakeFiles/sandwich_robot_geneus.dir/clean:
-	$(MAKE) -f CMakeFiles/sandwich_robot_geneus.dir/build.make CMakeFiles/sandwich_robot_geneus.dir/clean
-.PHONY : CMakeFiles/sandwich_robot_geneus.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/sandwich_robot_geneus.dir/clean
 
 .PHONY : clean
 
@@ -596,7 +566,7 @@ all: CMakeFiles/sandwich_robot_generate_messages.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/sandwich_robot_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 12
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/sandwich_robot_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 0
 .PHONY : CMakeFiles/sandwich_robot_generate_messages.dir/rule
@@ -613,6 +583,72 @@ CMakeFiles/sandwich_robot_generate_messages.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/sandwich_robot_generate_messages.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/sandwich_robot_generate_messages_eus.dir
+
+# All Build rule for target.
+CMakeFiles/sandwich_robot_generate_messages_eus.dir/all: CMakeFiles/std_msgs_generate_messages_eus.dir/all
+CMakeFiles/sandwich_robot_generate_messages_eus.dir/all: CMakeFiles/_sandwich_robot_generate_messages_check_deps_object_centers.dir/all
+CMakeFiles/sandwich_robot_generate_messages_eus.dir/all: CMakeFiles/_sandwich_robot_generate_messages_check_deps_object_pose.dir/all
+	$(MAKE) -f CMakeFiles/sandwich_robot_generate_messages_eus.dir/build.make CMakeFiles/sandwich_robot_generate_messages_eus.dir/depend
+	$(MAKE) -f CMakeFiles/sandwich_robot_generate_messages_eus.dir/build.make CMakeFiles/sandwich_robot_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/student/sandwich_ws/build/sandwich_robot/CMakeFiles --progress-num=14,15,16 "Built target sandwich_robot_generate_messages_eus"
+.PHONY : CMakeFiles/sandwich_robot_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/sandwich_robot_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/sandwich_robot_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 0
+.PHONY : CMakeFiles/sandwich_robot_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+sandwich_robot_generate_messages_eus: CMakeFiles/sandwich_robot_generate_messages_eus.dir/rule
+
+.PHONY : sandwich_robot_generate_messages_eus
+
+# clean rule for target.
+CMakeFiles/sandwich_robot_generate_messages_eus.dir/clean:
+	$(MAKE) -f CMakeFiles/sandwich_robot_generate_messages_eus.dir/build.make CMakeFiles/sandwich_robot_generate_messages_eus.dir/clean
+.PHONY : CMakeFiles/sandwich_robot_generate_messages_eus.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/sandwich_robot_generate_messages_eus.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/_sandwich_robot_generate_messages_check_deps_object_centers.dir
+
+# All Build rule for target.
+CMakeFiles/_sandwich_robot_generate_messages_check_deps_object_centers.dir/all:
+	$(MAKE) -f CMakeFiles/_sandwich_robot_generate_messages_check_deps_object_centers.dir/build.make CMakeFiles/_sandwich_robot_generate_messages_check_deps_object_centers.dir/depend
+	$(MAKE) -f CMakeFiles/_sandwich_robot_generate_messages_check_deps_object_centers.dir/build.make CMakeFiles/_sandwich_robot_generate_messages_check_deps_object_centers.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/student/sandwich_ws/build/sandwich_robot/CMakeFiles --progress-num= "Built target _sandwich_robot_generate_messages_check_deps_object_centers"
+.PHONY : CMakeFiles/_sandwich_robot_generate_messages_check_deps_object_centers.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/_sandwich_robot_generate_messages_check_deps_object_centers.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/_sandwich_robot_generate_messages_check_deps_object_centers.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 0
+.PHONY : CMakeFiles/_sandwich_robot_generate_messages_check_deps_object_centers.dir/rule
+
+# Convenience name for target.
+_sandwich_robot_generate_messages_check_deps_object_centers: CMakeFiles/_sandwich_robot_generate_messages_check_deps_object_centers.dir/rule
+
+.PHONY : _sandwich_robot_generate_messages_check_deps_object_centers
+
+# clean rule for target.
+CMakeFiles/_sandwich_robot_generate_messages_check_deps_object_centers.dir/clean:
+	$(MAKE) -f CMakeFiles/_sandwich_robot_generate_messages_check_deps_object_centers.dir/build.make CMakeFiles/_sandwich_robot_generate_messages_check_deps_object_centers.dir/clean
+.PHONY : CMakeFiles/_sandwich_robot_generate_messages_check_deps_object_centers.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/_sandwich_robot_generate_messages_check_deps_object_centers.dir/clean
 
 .PHONY : clean
 
@@ -748,16 +784,17 @@ clean: CMakeFiles/_sandwich_robot_generate_messages_check_deps_object_pose.dir/c
 # Target rules for target CMakeFiles/sandwich_robot_generate_messages_cpp.dir
 
 # All Build rule for target.
+CMakeFiles/sandwich_robot_generate_messages_cpp.dir/all: CMakeFiles/_sandwich_robot_generate_messages_check_deps_object_centers.dir/all
 CMakeFiles/sandwich_robot_generate_messages_cpp.dir/all: CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 CMakeFiles/sandwich_robot_generate_messages_cpp.dir/all: CMakeFiles/_sandwich_robot_generate_messages_check_deps_object_pose.dir/all
 	$(MAKE) -f CMakeFiles/sandwich_robot_generate_messages_cpp.dir/build.make CMakeFiles/sandwich_robot_generate_messages_cpp.dir/depend
 	$(MAKE) -f CMakeFiles/sandwich_robot_generate_messages_cpp.dir/build.make CMakeFiles/sandwich_robot_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/student/sandwich_ws/build/sandwich_robot/CMakeFiles --progress-num=12 "Built target sandwich_robot_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/student/sandwich_ws/build/sandwich_robot/CMakeFiles --progress-num=12,13 "Built target sandwich_robot_generate_messages_cpp"
 .PHONY : CMakeFiles/sandwich_robot_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/sandwich_robot_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/sandwich_robot_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/sandwich_ws/build/sandwich_robot/CMakeFiles 0
 .PHONY : CMakeFiles/sandwich_robot_generate_messages_cpp.dir/rule

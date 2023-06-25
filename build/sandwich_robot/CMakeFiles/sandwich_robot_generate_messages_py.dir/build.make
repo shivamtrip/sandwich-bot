@@ -53,22 +53,31 @@ CMAKE_BINARY_DIR = /home/student/sandwich_ws/build/sandwich_robot
 # Include the progress variables for this target.
 include CMakeFiles/sandwich_robot_generate_messages_py.dir/progress.make
 
+CMakeFiles/sandwich_robot_generate_messages_py: /home/student/sandwich_ws/devel/.private/sandwich_robot/lib/python2.7/dist-packages/sandwich_robot/msg/_object_centers.py
 CMakeFiles/sandwich_robot_generate_messages_py: /home/student/sandwich_ws/devel/.private/sandwich_robot/lib/python2.7/dist-packages/sandwich_robot/msg/_object_pose.py
 CMakeFiles/sandwich_robot_generate_messages_py: /home/student/sandwich_ws/devel/.private/sandwich_robot/lib/python2.7/dist-packages/sandwich_robot/msg/__init__.py
 
 
+/home/student/sandwich_ws/devel/.private/sandwich_robot/lib/python2.7/dist-packages/sandwich_robot/msg/_object_centers.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/student/sandwich_ws/devel/.private/sandwich_robot/lib/python2.7/dist-packages/sandwich_robot/msg/_object_centers.py: /home/student/sandwich_ws/src/sandwich_robot/msg/object_centers.msg
+/home/student/sandwich_ws/devel/.private/sandwich_robot/lib/python2.7/dist-packages/sandwich_robot/msg/_object_centers.py: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/student/sandwich_ws/build/sandwich_robot/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG sandwich_robot/object_centers"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/student/sandwich_ws/src/sandwich_robot/msg/object_centers.msg -Isandwich_robot:/home/student/sandwich_ws/src/sandwich_robot/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p sandwich_robot -o /home/student/sandwich_ws/devel/.private/sandwich_robot/lib/python2.7/dist-packages/sandwich_robot/msg
+
 /home/student/sandwich_ws/devel/.private/sandwich_robot/lib/python2.7/dist-packages/sandwich_robot/msg/_object_pose.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
 /home/student/sandwich_ws/devel/.private/sandwich_robot/lib/python2.7/dist-packages/sandwich_robot/msg/_object_pose.py: /home/student/sandwich_ws/src/sandwich_robot/msg/object_pose.msg
 /home/student/sandwich_ws/devel/.private/sandwich_robot/lib/python2.7/dist-packages/sandwich_robot/msg/_object_pose.py: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/student/sandwich_ws/build/sandwich_robot/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG sandwich_robot/object_pose"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/student/sandwich_ws/build/sandwich_robot/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG sandwich_robot/object_pose"
 	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/student/sandwich_ws/src/sandwich_robot/msg/object_pose.msg -Isandwich_robot:/home/student/sandwich_ws/src/sandwich_robot/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p sandwich_robot -o /home/student/sandwich_ws/devel/.private/sandwich_robot/lib/python2.7/dist-packages/sandwich_robot/msg
 
 /home/student/sandwich_ws/devel/.private/sandwich_robot/lib/python2.7/dist-packages/sandwich_robot/msg/__init__.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/student/sandwich_ws/devel/.private/sandwich_robot/lib/python2.7/dist-packages/sandwich_robot/msg/__init__.py: /home/student/sandwich_ws/devel/.private/sandwich_robot/lib/python2.7/dist-packages/sandwich_robot/msg/_object_centers.py
 /home/student/sandwich_ws/devel/.private/sandwich_robot/lib/python2.7/dist-packages/sandwich_robot/msg/__init__.py: /home/student/sandwich_ws/devel/.private/sandwich_robot/lib/python2.7/dist-packages/sandwich_robot/msg/_object_pose.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/student/sandwich_ws/build/sandwich_robot/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python msg __init__.py for sandwich_robot"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/student/sandwich_ws/build/sandwich_robot/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python msg __init__.py for sandwich_robot"
 	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/student/sandwich_ws/devel/.private/sandwich_robot/lib/python2.7/dist-packages/sandwich_robot/msg --initpy
 
 sandwich_robot_generate_messages_py: CMakeFiles/sandwich_robot_generate_messages_py
+sandwich_robot_generate_messages_py: /home/student/sandwich_ws/devel/.private/sandwich_robot/lib/python2.7/dist-packages/sandwich_robot/msg/_object_centers.py
 sandwich_robot_generate_messages_py: /home/student/sandwich_ws/devel/.private/sandwich_robot/lib/python2.7/dist-packages/sandwich_robot/msg/_object_pose.py
 sandwich_robot_generate_messages_py: /home/student/sandwich_ws/devel/.private/sandwich_robot/lib/python2.7/dist-packages/sandwich_robot/msg/__init__.py
 sandwich_robot_generate_messages_py: CMakeFiles/sandwich_robot_generate_messages_py.dir/build.make
