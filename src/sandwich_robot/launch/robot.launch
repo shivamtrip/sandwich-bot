@@ -1,7 +1,13 @@
 <launch>
   <node name="object_detector" pkg="sandwich_robot" type="object_detection.py" output="screen"/>
   <node name="get_transforms" pkg="sandwich_robot" type="get_transforms.py" output="screen"/>
+<<<<<<< HEAD
   <node name="fsm_node" pkg="sandwich_robot" type="fsm.py" output="screen"/>
     //make sure you every script is executable with chmod +x 
 </launch>
 
+=======
+
+  <include file="$(find azure_kinect_ros_driver)/launch/driver.launch" />
+</launch>
+>>>>>>> ed4c85d5227bf5018d8fe4c70e09e83023a13097

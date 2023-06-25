@@ -57,7 +57,8 @@ class ColorDetector:
                                 mask = self.red_mask)
 
         # For yellow color
-        self.yellow_mask = cv2.dilate(self.yellow_mask, self.kernel)
+        self.yellow_mask = cv2.dilate(self.yellow_mask, self.kernel, 5)
+        # self.yellow_mask = cv2.erode(self.yellow_mask, self.kernel)
         self.res_yellow = cv2.bitwise_and(self.image, self.image, 
                                 mask = self.yellow_mask)
 
@@ -69,6 +70,7 @@ class ColorDetector:
 
         self.object_centers["red"] = []
         self.object_centers["yellow"] = []
+        count = 0
 
         for i in range(self.number_of_colors):
             cur_contour = self.contours[i]
@@ -91,14 +93,17 @@ class ColorDetector:
                     vs += 400
 
                     if i == 0:
-                        self.object_centers["red"].append((us, vs))
-                    elif i == 1:
-                        self.object_centers["yellow"].append((us, vs))
+                        self.object_centers["red"].append((us, vs))     
+                        cv2.putText(self.image, "Tomato", (x, y+h+20), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0,0,0), 2)
 
-                    if len(self.object_centers["yellow"]) == 2:
-                        self.yellow_area_2 = area
-                    else:
-                        self.yellow_area_1 = area
+                    elif i == 1:
+                        self.object_centers["yellow"].append((us + 15, vs))     # + 15 is offset added counteract error due to parallax (previously center was off in x)
+                        cv2.putText(self.image, "Bun " + str(count), (x, y+h+20), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0,0,0), 2)
+                        count += 1
+                    # if len(self.object_centers["yellow"]) == 2:
+                    #     self.yellow_area_2 = area
+                    # else:
+                    #     self.yellow_area_1 = area
 
         cv2.imshow("mask",self.yellow_mask)
         cv2.imshow("cam",self.image)
@@ -110,27 +115,36 @@ class ColorDetector:
 
         try:
             # Append coordinates of tomato (red ingredient)
-            self.object_center_x.append(self.object_centers["red"][0][0])
-            self.object_center_y.append(self.object_centers["red"][0][1])
 
-            # Append coordinates of bun (yellow ingredient). Base bun is appended first (lower area).
-            if self.yellow_area_1 < self.yellow_area_2:
-                self.object_center_x.append(self.object_centers["yellow"][0][0])
-                self.object_center_y.append(self.object_centers["yellow"][0][1])
+            for i in self.object_centers["red"]:
+                self.object_center_x.append(i[0])
+                self.object_center_y.append(i[1])
 
-                self.object_center_x.append(self.object_centers["yellow"][1][0])
-                self.object_center_y.append(self.object_centers["yellow"][1][1])
+            for i in self.object_centers["yellow"]:
+                self.object_center_x.append(i[0])
+                self.object_center_y.append(i[1])
 
-            else:
-                self.object_center_x.append(self.object_centers["yellow"][1][0])
-                self.object_center_y.append(self.object_centers["yellow"][1][1])
 
-                self.object_center_x.append(self.object_centers["yellow"][0][0])
-                self.object_center_y.append(self.object_centers["yellow"][0][1])
+            # # Append coordinates of bun (yellow ingredient). Base bun is appended first (lower area).
+            # if len(self.object_centers["yellow"]) == 2 and self.yellow_area_1 > self.yellow_area_2:
+            #     self.object_center_x.append(self.object_centers["yellow"][0][0])
+            #     self.object_center_y.append(self.object_centers["yellow"][0][1])
+
+            #     self.object_center_x.append(self.object_centers["yellow"][1][0])
+            #     self.object_center_y.append(self.object_centers["yellow"][1][1])
+
+            # else:
+            #     self.object_center_x.append(self.object_centers["yellow"][1][0])
+            #     self.object_center_y.append(self.object_centers["yellow"][1][1])
+
+            #     self.object_center_x.append(self.object_centers["yellow"][0][0])
+            #     self.object_center_y.append(self.object_centers["yellow"][0][1])
                 
+            rospy.loginfo("Message Created Successfully")
             self.status = True
                 
-        except IndexError:
+        except (IndexError, AttributeError):
+            rospy.logwarn("IndexError or AttributeError faced, message creation failed.")
             self.status = False
             pass
     
@@ -139,7 +153,7 @@ class ColorDetector:
 
         self.pose_pub.x_center = self.object_center_x
         self.pose_pub.y_center = self.object_center_y
-        self.pose_pub.num_items = 3
+        self.pose_pub.num_items = len(self.object_center_x)
         self.pose_pub.status = self.status
 
         pub.publish(self.pose_pub)

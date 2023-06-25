@@ -20,10 +20,13 @@ class SandwichFSM:
 
 
     def main(self):
+        count = 0
 
         while not rospy.is_shutdown():
-
+            
             if self.state == States.IDLE:
+                count += 1
+                print("\n----- ITERATION {} -----\n".format(count))
                 print("Sandwich Robot initializing..")
                 
                 sw = manipulation.SandwichMaker()           #instantiate sandwich maker class
