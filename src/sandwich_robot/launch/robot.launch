@@ -1,0 +1,7 @@
+<launch>
+  <node name="object_detector" pkg="sandwich_robot" type="object_detection.py" output="screen"/>
+  <node name="get_transforms" pkg="sandwich_robot" type="get_transforms.py" output="screen"/>
+  <node name="fsm_node" pkg="sandwich_robot" type="fsm.py" output="screen"/>
+    //make sure you every script is executable with chmod +x 
+</launch>
+
