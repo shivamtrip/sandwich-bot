@@ -1,1 +1,0 @@
-/home/student/sandwich_ws/devel/.private/sandwich_robot/share/roseus/ros/sandwich_robot/msg/object_centers.l

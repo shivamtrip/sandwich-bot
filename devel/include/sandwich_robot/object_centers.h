@@ -1,1 +1,0 @@
-/home/student/sandwich_ws/devel/.private/sandwich_robot/include/sandwich_robot/object_centers.h

@@ -1,1 +1,0 @@
-/home/student/sandwich_ws/devel/.private/sandwich_robot/share/sandwich_robot/cmake/sandwich_robotConfig-version.cmake
